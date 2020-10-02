@@ -9,26 +9,26 @@ namespace ggt
         {
             try
             {
-                // Return if there are too few args
+                // በጣም ጥቂት ክርክሮች ካሉ ይመለሱ
                 if (args.Length < 1){ Console.WriteLine("Malformed input"); return; }
                 
-                // TryParse the input from the CLI
+                // ከትእዛዝ መስመር በይነገጽ ግቤቱን ይሞክሩ ይሞክሩ
                 var x = int.TryParse(args[0], out var a);
                 var y = int.TryParse(args[1], out var b);
             
-                // Return if the input wasn't parsed successfully
+                // ግብዓቱ በተሳካ ሁኔታ ካልተመረመረ ይመለሱ
                 if (!x || !y) { Console.WriteLine("Malformed input"); return; }
             
-                // Instantiate new class to calc gcf and lcm
+                // ታላቅ የጋራ ሁኔታን እና ዝቅተኛውን የጋራ ብዛትን ለማስላት አዲስ ክፍልን በፍጥነት ያስጀምሩ
                 var calc = new Calc(a, b);
 
-                // calc results and write them to STDOUT
+                // ውጤቶችን ያስሉ እና ወደ መደበኛ ውጤት ይፃፉ
                 Console.WriteLine($"GGT: {calc.CalcGcf()}, KGV: {calc.CalcLcm()}");
             }
             catch (Exception e)
             {
-                // Caught the little bastard!
-                // TO THE CONSOLE WITH HIM!
+                // ትንሹ ባስታርን ያዘው!
+                // ከእሱ ጋር ወደ ኮንሶል!
                 Console.WriteLine($"An error occured: {e}");
             }
         }

@@ -1,18 +1,18 @@
 namespace ggt
 {
     /// <summary>
-    /// This class exposes to methods for
-    /// calculating the lowest common multiple
-    /// and greatest common factor
+    /// ይህ ክፍል ለ ዘዴዎች ያጋልጣል
+    /// በጣም ዝቅተኛውን የጋራ ብዛት ማስላት
+    /// እና ትልቁ የጋራ ነገር
     /// </summary>
     public class Calc
     {
         private readonly int _a, _b;
         /// <summary>
-        /// Constructor for the Calc class
+        /// ለ ‹Calc› ክፍል ገንቢ
         /// </summary>
-        /// <param name="a">The first input number</param>
-        /// <param name="b">The second input number</param>
+        /// <param name="a">የመጀመሪያው የግቤት ቁጥር</param>
+        /// <param name="b">ሁለተኛው የግቤት ቁጥር</param>
         public Calc(int a, int b)
         {
             _a = a;
@@ -20,9 +20,9 @@ namespace ggt
         }
 
         /// <summary>
-        /// Calculate the greatest common factor
+        /// ትልቁን የጋራ ነገር አስሉ
         /// </summary>
-        /// <returns>Returns the greatest common factor</returns>
+        /// <returns>ትልቁን የጋራ ነገር ይመልሳል</returns>
         public int CalcGcf()
         {
             var a = _a;
@@ -38,9 +38,9 @@ namespace ggt
         }
         
         /// <summary>
-        /// Calculate the lowest common multiple
+        /// በጣም ዝቅተኛውን የጋራ ብዛት ያሰሉ
         /// </summary>
-        /// <returns>Returns the lowest common multiple</returns>
+        /// <returns>በጣም ዝቅተኛውን የጋራ ብዛት ይመልሳል</returns>
         public int CalcLcm()
         {
             return _a * _b / CalcGcf();
